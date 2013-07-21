@@ -8,7 +8,7 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
   var fs =require ('fs');
-  var mybuffer = readFileSync("./index.html");
+  var mybuffer = fs.readFileSync("./index.html");
   response.send(mybuffer.toString());
 });
 
